@@ -27,9 +27,9 @@ function App() {
     () => {
       let citasIniciales = JSON.parse(localStorage.getItem('citas'));
       if (citasIniciales) {
-        localStorage.getItem('citas', JSON.stringify(citas));
+        localStorage.setItem('citas', JSON.stringify(citas));
       } else {
-        localStorage.getItem('citas', JSON.stringify([]));
+        localStorage.setItem('citas', JSON.stringify([]));
       }
     }, [citas]
   );
